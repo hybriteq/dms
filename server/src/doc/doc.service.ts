@@ -8,7 +8,7 @@ export class DocService {
     constructor(@InjectModel('Doc') private readonly docModel: Model<Doc>) { }
 
     async create(createDocDto: any): Promise<Doc> {
-        createDocDto.t = Date.now()
+        createDocDto.updatedTime = Date.now()
         const createdCat = new this.docModel(createDocDto);
         return await createdCat.save();
     }

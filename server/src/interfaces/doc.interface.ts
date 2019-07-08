@@ -1,5 +1,6 @@
 export interface Doc {
     path: String,
-    t: Number,
-    c: any,
+    updatedTime: Number,
+    type: String,
+    content: any,
 }
